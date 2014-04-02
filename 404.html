@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>404 Not Found</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css" />
+	<script src="js/1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/HeadImage.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+	<body> 
+
+
+<img src="http://i.imgur.com/Wmgr1At.png" align="middle">
+		 <div class="content-wrapper">
+            <div class="row">
+                <div class="column-1-3">
+                    <div class="image-holder one">
+                        <img class="head-image up" src="http://i.imgur.com/dkAKq9U.jpg"/>
+                        <img class="head-image up-left" src="http://i.imgur.com/WXTNt3r.jpg"/>
+                        <img class="head-image left" src="http://i.imgur.com/yWbAUSb.jpg"/>
+                        <img class="head-image down-left" src="http://i.imgur.com/ChI5IPB.jpg"/>
+                        <img class="head-image down" src="http://i.imgur.com/7Ffl9SU.jpg"/>
+                        <img class="head-image down-right" src="http://i.imgur.com/wh9W0pJ.jpg"/>
+                        <img class="head-image right" src="http://i.imgur.com/MpEdEyy.jpg"/>
+                        <img class="head-image up-right" src="http://i.imgur.com/bZUjMDK.jpg"/>
+                        <img class="head-image front" src="http://i.imgur.com/DDsW2L7.jpg"/>
+                    </div>
+                </div>
+        	</div>
+
+    <script type="text/javascript">
+            
+            /* Declaring the global variables */
+            var mouseX;
+            var mouseY;
+            var imageOne;
+            var imageTwo;
+            var imageThree;
+            var imageFour;
+            var imageFive;
+            
+            /* Calling the initialization function */
+            $(init);
+            
+            /* The images need to re-initialize on load and on resize, or else the areas
+             * where each image is displayed will be wrong. */
+            $(window).load(init);
+            $(window).resize(init);
+            
+            /* Setting the mousemove event caller */
+            $(window).mousemove(getMousePosition);
+            
+            /* This function is called on document ready, on load and on resize
+             * and initiallizes all the images */
+            function init(){
+                
+                /* Instanciate the mouse position variables */
+                mouseX = 0;
+                mouseY = 0;
+                
+                /* Instanciate a HeadImage class for every image */
+                imageOne = new HeadImage("one");
+                imageTwo = new HeadImage("two");
+                imageThree = new HeadImage("three");
+                imageFour = new HeadImage("four");
+                imageFive = new HeadImage("five");
+            }
+            
+            /* This function is called on mouse move and gets the mouse position. 
+             * It also calls the HeadImage function to display the correct image*/
+            function getMousePosition(event){
+                
+                /* Setting the mouse position variables */
+                mouseX = event.pageX;
+                mouseY = event.pageY;
+                
+                /*Calling the setImageDirection function of the HeadImage class
+                 * to display the correct image*/
+                imageOne.setImageDirection();
+                imageTwo.setImageDirection();
+                imageThree.setImageDirection();
+                imageFour.setImageDirection();
+                imageFive.setImageDirection();
+            }
+            
+
+
+        </script>
+
+
+
+	</body>
+	</head>
+</html>
