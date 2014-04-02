@@ -1,0 +1,60 @@
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-family: 'Arial';
+    font-size: 154px;
+
+}
+
+
+.row{
+    width: 100%;
+    position: relative;
+    font-size: 0;
+    height: 260px;
+}
+
+.column-1-3{
+    margin: auto;
+    min-height: 1px;
+}
+
+
+.column-1-3{
+    width: 33.333%;
+}
+
+
+.text-holder{
+    display: none;
+}
+
+.image-holder{
+    position: fixed;
+    margin: 0 auto;
+    width: 260px;
+    height: 260px;
+}
+
+.head-image,.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 360px;
+}
+
+.head-image{
+    z-index: 0;
+}
+
+.circle{
+    z-index: 2;
+}
+
+
